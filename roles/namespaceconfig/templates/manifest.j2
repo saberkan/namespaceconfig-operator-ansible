@@ -1,0 +1,7 @@
+---
+apiVersion: {{ item.apiVersion }}
+kind: {{ item.kind }}
+metadata:
+ name: {{ item.metadata.name }}
+ namespace: {{ item.metadata.namespace }}
+spec: {{ item.spec }}

@@ -1,0 +1,5 @@
+---
+- version: v1
+  group: namespaceconfig.ei.com
+  kind: Namespaceconfig
+  role: namespaceconfig

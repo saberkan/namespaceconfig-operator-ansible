@@ -1,0 +1,28 @@
+apiVersion: namespaceconfig.ei.com/v1
+kind: Namespaceconfig
+metadata:
+  name: example-namespaceconfig
+spec:
+  objects:
+    - kind: LimitRange
+      apiVersion: v1
+      metadata:
+        name: overcommit-limits-1
+        namespace: saberkan
+      spec:
+        limits:
+        - type: Container
+          maxLimitRequestRatio:
+            cpu: '100'
+            memory: '1'
+    - kind: LimitRange
+      apiVersion: v1
+      metadata:
+        name: overcommit-limits-2
+        namespace: saberkan
+      spec:
+        limits:
+        - type: Container
+          maxLimitRequestRatio:
+            cpu: '100'
+            memory: '1'

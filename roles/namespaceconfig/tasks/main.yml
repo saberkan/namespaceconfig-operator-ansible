@@ -1,0 +1,15 @@
+---
+- name: show manifests spec camelCase
+  debug:
+    msg: "{{ _namespaceconfig_ei_com_namespaceconfig_spec }}"
+
+- name: Show manifests spec snake_case
+  debug:
+    msg: "{{ objects }}"
+
+- name: Deploy namespace config camelCase
+  k8s:
+    state: present
+    definition:
+      "{{ item }}"   
+  loop: "{{ _namespaceconfig_ei_com_namespaceconfig_spec.objects }}"
